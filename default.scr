@@ -1,0 +1,82 @@
+[main]
+	Hi! I am your college guide. How may I help you with??[[Admissions, Courseworks, Placements, Others]]
+		Admissions  :call default.admissions
+		Courseworks :call default.courseworks
+		Placements  :call default.placement
+		Others	:call default.others
+	
+[admissions]
+	abot1: Choose area [[B-tech, M-tech, MBA, M.Sc]]
+		auser11: B-tech
+			abot111: What you need help with [[Number of Seats, Fees]]
+				auser1111: Number of Seats
+					abot1111: {{handle}} :call default.handlecard
+				auser1112: Fees
+					abot1112: {{handle}} :call default.handlecard
+		auser12: M-tech
+			abot121: What do you need help with [[Number of Seats, Fees]]
+				auser1211: Number of Seats
+					abot1211: {{handle}} :call default.handlecard
+				auser1212: Fees
+					abot1212: {{handle}}:call default.handlecard
+		auser13: MBA
+			abot131: What do you need help with [[Number of Seats, Fees]]
+				auser1311: Number of Seats
+					abot1311: {{handle}} :call default.handlecard
+				auser1312: Fees
+					abot1312: {{handle}} :call default.handlecard
+		auser14: M.Sc
+			abot141: What do you need help with [[Number of Seats, Fees]]
+				auser1411: Number of Seats
+					abot1411: {{handle}} :call default.handlecard
+				auser1412: Fees
+					abot1412: {{handle}} :call default.handlecard
+					
+[courseworks]
+	cbot1: What semester courseworks[CSE only] you need? [[1,2,3,4,5,6,7,8]]
+		cuser11: 1
+			cbot11: {{card}} :call default.handlecard
+		cuser12: 2 
+			cbot12: {{card}} :call default.handlecard
+		cuser13: 3 
+			cbot13: {{card}} :call default.handlecard
+		cuser14: 4
+			cbot14:{{card}} :call default.handlecard
+		cuser15: 5 
+			cbot15: {{card}} :call default.handlecard
+		cuser16: 6 
+			cbot16:{{card}} :call default.handlecard			
+		cuser17: 7 
+			cbot17: {{card}} :call default.handlecard
+		cuser18: 8 
+			cbot18: {{card}} :call default.handlecard			
+			
+[handlecard]
+	hbot1: Hope we sorted out your issue, Goto others for rest query [[Ok,Issue resolved]]
+		huser11: Ok :call default.main
+		huser12: Issue resolved
+			hbot121: Great! See you later..
+
+
+[others]
+	obot1: Write your query
+		ouser11: I want to get the contact details|contact details | contact account manager | contact coe
+			obot11: {{call}} :continue
+	obot2: Goto others for rest query [[Ok,Issue resolved]]
+		ouser21: Ok :call default.main
+		ouser22: Issue resolved
+			obot221: Great! See you later..			
+
+[placement]			
+	pbot1: What you want help with [[Placement-preparation, Average-Placements, Top-Companies, Highest-Packages]]
+		puser11: Placement-preparation
+			pbot11: {{card}} :call default.handlecard
+		puser12: Average-Placements
+			pbot12: 5LPA :call default.handlecard
+		puser13: Top-Companies
+			pbot13: {{card}} :call default.handlecard
+		puser14: Highest-Packages
+			pbot14: 15LPA-Cisco :call default.handlecard
+
+
+
