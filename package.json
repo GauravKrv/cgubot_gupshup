@@ -1,0 +1,17 @@
+{
+    "name": "devnode",
+    "version": "0.0.0",
+    "description": "Sample bot from gupshup",
+    "main": "./node_modules/gupshup-botrunner/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./node_modules/gupshup-botrunner/index.js"
+    },
+    "author": "Gupshup Developer",
+    "license": "ISC",
+    "dependencies": {
+        "bot-script": "*",
+        "gupshup-botrunner": "*"
+    }
+}
+
